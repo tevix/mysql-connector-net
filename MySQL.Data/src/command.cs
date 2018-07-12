@@ -54,6 +54,8 @@ namespace MySql.Data.MySqlClient
         private bool useDefaultTimeout;
         private static List<string> keywords = null;
         private bool disposed = false;
+        public bool? ForceMaster = null;
+        public bool? ForceReplica = null;
 
         /// <include file='docs/mysqlcommand.xml' path='docs/ctor1/*'/>
         public MySqlCommand()
@@ -394,7 +396,8 @@ namespace MySql.Data.MySqlClient
             // Load balancing getting a new connection
             if (connection.hasBeenOpen && !driver.HasStatus(ServerStatusFlags.InTransaction))
             {
-                ReplicationManager.GetNewConnection(connection.Settings.Server, !IsReadOnlyCommand(sql), connection);
+                ReplicationManager.GetNewConnection(connection.Settings.Server, 
+                    this.ForceMaster.HasValue && this.ForceMaster.Value ? true : (this.ForceReplica.HasValue && !this.ForceReplica.Value ? false : !IsReadOnlyCommand(sql) ), connection);
             }
 #endif
 

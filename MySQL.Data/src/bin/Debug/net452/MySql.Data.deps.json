@@ -1,0 +1,288 @@
+{
+  "runtimeTarget": {
+    "name": ".NETFramework,Version=v4.5.2/",
+    "signature": "5cb5a1f289b54b4d1b43f98982f28ec307401df1"
+  },
+  "compilationOptions": {
+    "defines": [
+      "TRACE",
+      "TRACE",
+      "DEBUG",
+      "DEBUG",
+      "NET452"
+    ],
+    "languageVersion": "",
+    "platform": "",
+    "allowUnsafe": false,
+    "warningsAsErrors": false,
+    "optimize": false,
+    "keyFile": "..\\..\\ConnectorNetPublicKey.snk",
+    "delaySign": true,
+    "publicSign": true,
+    "emitEntryPoint": false,
+    "xmlDoc": false,
+    "debugType": "portable"
+  },
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "MySql.Data/8.0.11": {
+        "dependencies": {
+          "Google.Protobuf": "3.5.1",
+          "Microsoft.CSharp.Reference": "4.0.0.0",
+          "System.ComponentModel.DataAnnotations": "4.0.0.0",
+          "System.ComponentModel.Reference": "4.0.0.0",
+          "System.Configuration": "4.0.0.0",
+          "System.Configuration.Install": "4.0.0.0",
+          "System.Core": "4.0.0.0",
+          "System.Data": "4.0.0.0",
+          "System": "4.0.0.0",
+          "System.Drawing.Design": "4.0.0.0",
+          "System.Drawing": "4.0.0.0",
+          "System.IO.Compression.FileSystem": "4.0.0.0",
+          "System.Management": "4.0.0.0",
+          "System.Numerics": "4.0.0.0",
+          "System.Runtime.Serialization": "4.0.0.0",
+          "System.Transactions": "4.0.0.0",
+          "System.Xml": "4.0.0.0",
+          "System.Xml.Linq": "4.0.0.0",
+          "mscorlib": "4.0.0.0"
+        },
+        "compile": {
+          "MySql.Data.dll": {}
+        }
+      },
+      "Microsoft.CSharp.Reference/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/Microsoft.CSharp.dll": {}
+        }
+      },
+      "System.ComponentModel.DataAnnotations/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.ComponentModel.DataAnnotations.dll": {}
+        }
+      },
+      "System.ComponentModel.Reference/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/Facades/System.ComponentModel.dll": {}
+        }
+      },
+      "System.Configuration/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Configuration.dll": {}
+        }
+      },
+      "System.Configuration.Install/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Configuration.Install.dll": {}
+        }
+      },
+      "System.Core/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Core.dll": {}
+        }
+      },
+      "System.Data/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Data.dll": {}
+        }
+      },
+      "System/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.dll": {}
+        }
+      },
+      "System.Drawing.Design/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Drawing.Design.dll": {}
+        }
+      },
+      "System.Drawing/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Drawing.dll": {}
+        }
+      },
+      "System.IO.Compression.FileSystem/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.IO.Compression.FileSystem.dll": {}
+        }
+      },
+      "System.Management/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Management.dll": {}
+        }
+      },
+      "System.Numerics/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Numerics.dll": {}
+        }
+      },
+      "System.Runtime.Serialization/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Runtime.Serialization.dll": {}
+        }
+      },
+      "System.Transactions/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Transactions.dll": {}
+        }
+      },
+      "System.Xml/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Xml.dll": {}
+        }
+      },
+      "System.Xml.Linq/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/System.Xml.Linq.dll": {}
+        }
+      },
+      "mscorlib/4.0.0.0": {
+        "compile": {
+          ".NETFramework/v4.5.2/mscorlib.dll": {}
+        }
+      },
+      "Google.Protobuf/3.5.1": {
+        "compile": {
+          "lib/net45/Google.Protobuf.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.5.2/": {
+      "MySql.Data/8.0.11": {
+        "dependencies": {
+          "Google.Protobuf": "3.5.1",
+          "Microsoft.CSharp.Reference": "4.0.0.0",
+          "System.ComponentModel.DataAnnotations": "4.0.0.0",
+          "System.ComponentModel.Reference": "4.0.0.0",
+          "System.Configuration": "4.0.0.0",
+          "System.Configuration.Install": "4.0.0.0",
+          "System.Core": "4.0.0.0",
+          "System.Data": "4.0.0.0",
+          "System": "4.0.0.0",
+          "System.Drawing.Design": "4.0.0.0",
+          "System.Drawing": "4.0.0.0",
+          "System.IO.Compression.FileSystem": "4.0.0.0",
+          "System.Management": "4.0.0.0",
+          "System.Numerics": "4.0.0.0",
+          "System.Runtime.Serialization": "4.0.0.0",
+          "System.Transactions": "4.0.0.0",
+          "System.Xml": "4.0.0.0",
+          "System.Xml.Linq": "4.0.0.0",
+          "mscorlib": "4.0.0.0"
+        },
+        "runtime": {
+          "MySql.Data.dll": {}
+        }
+      },
+      "Google.Protobuf/3.5.1": {
+        "runtime": {
+          "lib/net45/Google.Protobuf.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MySql.Data/8.0.11": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Google.Protobuf/3.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f2k1VNaB9bfvEsvARzzEL1TZiIpL33KKK3JMH7UANlPlJVptuvsk4qpBZEnz0pORWZOdUHlVwMQuUzFqjJYCxA==",
+      "path": "google.protobuf/3.5.1",
+      "hashPath": "google.protobuf.3.5.1.nupkg.sha512"
+    },
+    "Microsoft.CSharp.Reference/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ComponentModel.DataAnnotations/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ComponentModel.Reference/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Configuration/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Configuration.Install/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Core/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Drawing.Design/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Drawing/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.IO.Compression.FileSystem/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Management/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Numerics/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Runtime.Serialization/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Transactions/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Xml/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Xml.Linq/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "mscorlib/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

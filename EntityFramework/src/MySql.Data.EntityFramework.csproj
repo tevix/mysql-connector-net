@@ -4,7 +4,7 @@
     <Description>MySql.Data.EntityFramework</Description>
     <Copyright>Copyright © 2016, 2018, Oracle and/or its affiliates. All rights reserved.</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <Version>8.0.10-rc</Version>
+    <Version>8.0.11</Version>
     <Authors>Oracle</Authors>
     <TargetFramework>net452</TargetFramework>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
@@ -30,6 +30,7 @@
     <None Remove="Properties\SchemaDefinition-5.5.ssdl" />
     <None Remove="Properties\SchemaDefinition-5.6.ssdl" />
     <None Remove="Properties\SchemaDefinition-5.7.ssdl" />
+    <None Remove="Properties\SchemaDefinition-8.0.ssdl" />
     <None Remove="Properties\SchemaMapping.msl" />
     <Content Include="..\..\Nuget\Entity\app.config.transform" />
     <Content Include="..\..\Nuget\Entity\web.config.transform" />
@@ -37,6 +38,9 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Properties\ProviderManifest.xml">
+      <CustomToolNamespace></CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\SchemaDefinition-8.0.ssdl">
       <CustomToolNamespace></CustomToolNamespace>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\SchemaDefinition-5.0.ssdl">
@@ -94,7 +98,6 @@
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
-    <Reference Include="System.Runtime" />
     <Reference Include="System" />
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>

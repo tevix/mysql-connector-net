@@ -1,0 +1,13 @@
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\bin\Debug\net452\MySql.Data.deps.json
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\bin\Debug\net452\MySql.Data.dll
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\bin\Debug\net452\MySql.Data.pdb
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\bin\Debug\net452\Google.Protobuf.dll
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.csprojResolveAssemblyReference.cache
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.Resources.resources
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.ResourcesX.resources
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.csproj.GenerateResource.Cache
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.csproj.CoreCompileInputs.cache
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.AssemblyInfoInputs.cache
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.AssemblyInfo.cs
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.dll
+Z:\tvx\workspace\tvx-sln\mysql-connector-net\MySQL.Data\src\obj\Debug\net452\MySql.Data.pdb

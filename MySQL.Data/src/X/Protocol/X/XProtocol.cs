@@ -1,4 +1,4 @@
-// Copyright © 2015, 2017, Oracle and/or its affiliates. All rights reserved.
+// Copyright © 2015, 2018, Oracle and/or its affiliates. All rights reserved.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License, version 2.0, as
@@ -108,7 +108,7 @@ namespace MySqlX.Protocol
 
         case ServerMessageId.ERROR:
           var error = Error.Parser.ParseFrom(p.Buffer);
-          throw new MySqlException("Unable to connect: " + error.Msg);
+          throw new MySqlException(error.Code, error.SqlState, error.Msg);
 
         case ServerMessageId.NOTICE:
           ///TODO:  fix this
@@ -233,13 +233,17 @@ namespace MySqlX.Protocol
       switch (state.Param)
       {
         case SessionStateChanged.Types.Parameter.RowsAffected:
-            rs._recordsAffected = state.Value.VUnsignedInt;
+            rs._recordsAffected = state.Value[0].VUnsignedInt;
           break;
         case SessionStateChanged.Types.Parameter.GeneratedInsertId:
-            rs._autoIncrementValue = state.Value.VUnsignedInt;
+            rs._autoIncrementValue = state.Value[0].VUnsignedInt;
           break;
         case SessionStateChanged.Types.Parameter.ProducedMessage:
-          rs.AddWarning(new WarningInfo(0, state.Value.VString.Value.ToStringUtf8()));
+          rs.AddWarning(new WarningInfo(0, state.Value[0].VString.Value.ToStringUtf8()));
+          break;
+        case SessionStateChanged.Types.Parameter.GeneratedDocumentIds:
+          foreach (var value in state.Value)
+            rs._documentIds.Add(value.VOctets.Value.ToStringUtf8());
           break;
           // handle the other ones
 //      default: SessionStateChanged(state);
@@ -554,6 +558,7 @@ namespace MySqlX.Protocol
       builder.Collection = ExprUtil.BuildCollection(schema, collection);
       builder.DataModel = (isRelational ? DataModel.Table : DataModel.Document);
       if (findParams.Locking != 0) builder.Locking = (Find.Types.RowLock) findParams.Locking;
+      if (findParams.LockingOption != 0) builder.LockingOptions =(Find.Types.RowLockOptions)findParams.LockingOption;
       if (findParams.Projection != null && findParams.Projection.Length > 0)
         builder.Projection.Add(new ExprParser(ExprUtil.JoinString(findParams.Projection)).ParseTableSelectProjection());
       ApplyFilter(v => builder.Limit = v, v => builder.Criteria = v, builder.Order.Add, filter, builder.Args.Add);
@@ -564,6 +569,15 @@ namespace MySqlX.Protocol
     {
       var builder = CreateFindMessage(schema, collection, isRelational, filter, findParams);
       _writer.Write(ClientMessageId.CRUD_FIND, builder);
+    }
+
+    public void SendExpectOpen(Mysqlx.Expect.Open.Types.Condition.Types.Key condition)
+    {
+      var builder = new Mysqlx.Expect.Open();
+      var cond = new Mysqlx.Expect.Open.Types.Condition();
+      cond.ConditionKey = (uint)condition;
+      builder.Cond.Add(cond);
+      _writer.Write(ClientMessageId.EXPECT_OPEN, builder);
     }
 
     internal void ReadOkClose()
